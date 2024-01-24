@@ -1,0 +1,199 @@
+@media all and (max-width : 860px) and (min-width : 541px) {
+    /* 햄버거버튼 ----------------------------------- */
+    #menuIcon{
+        display: none;
+    }
+    #menuIcon + label{
+        display: none;
+        /* display: block;
+        width: 30px; height: 15px;
+        position: absolute; top: 22.5px; left: 15px;
+        cursor: pointer; */
+    }
+    #menuIcon + label span{
+        display: block;
+        position: absolute;
+        width: 100%; height: 2px;
+        border-radius: 30px;
+        background-color: #ffffff;
+        transition: .35s;
+    }
+    #menuIcon + label span:first-child{
+        top: 0;
+    }
+    #menuIcon + label span:last-child{
+        bottom: 0;
+    }
+
+    /* 메뉴버튼 체크 후 */
+    #menuIcon:checked + label span:first-child{
+        top: calc(50% - 1px);
+        transform: rotate(45deg);
+    }
+    #menuIcon:checked + label span:last-child{
+        bottom: calc(50% - 1px);
+        transform: rotate(-45deg);
+    }
+    /* 햄버거버튼 끝 ----------------------------------- */
+
+    /* 검색 모달창 -------------------------------------- */
+    .searchModal{
+        display: none;
+    }
+    .hiddenMenuBg{
+        visibility: hidden;
+    }
+
+    .wrap{
+        height: 270vh;
+    }
+    p::selection{
+        background-color: #ffc029;
+    }
+
+    /* 헤더 ================================================================= */
+
+    header{
+        width: 100%; height: 80px;
+        position: fixed; top: 0; left: 0; z-index: 999;
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 0 2rem; box-sizing: border-box; 
+        background-color: #ffffff;
+    }
+    .mainLogo{
+        width: 150px; height: 100%;
+        background-color: palevioletred;
+    }
+    .MenuWrap{
+        width: calc(100% - 250px); height: 100%;
+        display: flex; justify-content: right; align-items: center;
+    }
+    .MenuWrap a{
+        padding: 0.3rem 0.5rem; box-sizing: border-box;
+        font-size: 1.5rem;
+        font-family: 'Rubik Bubbles', system-ui;
+    }
+    .searchBut{
+        width: 50px; height: 50px;
+        border-radius: 100px;
+        background-color: purple;
+    }
+
+    /* 메인컨텐츠 영역 ======================================================== */
+    .contentsWrap{
+        height: fit-content;
+    }
+
+    .leftContainer{
+        width: 100%; height: 50vh;
+    }
+    .textWrap{
+        width: 100%; height: 100%;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+    }
+    .campaignTitle{
+        font-size: 5rem;
+        font-family: 'Rubik Bubbles', system-ui;
+        padding: 10rem 0 1.5rem 0;
+        color: rgb(88, 55, 11);
+    }
+    .campaignTitle ~ h4{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .campaignTitle ~ p{
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .leftContainer img{
+        display: none;
+    }
+    .rightContainer{
+        width: 100%; height: 220vh;
+        display: flex; justify-content: space-around;
+    }
+    .line{
+        width: 45%; height: 100%;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+    }
+    /* .leftLine{
+        margin-top: -8rem;
+    } */
+    .conBox{
+        width: 100%; height: fit-content;
+    }
+    .conBox:not(:last-child) {
+        margin-bottom: 10vh;
+    }
+    .conBox div{
+        height: fit-content;
+    }
+    .conBox img{
+        object-fit: contain;
+    }
+    .conBox h5{
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+    }
+    .conBox mark{
+        background-color: transparent;
+    }
+    .conBox:hover mark{
+        background-color: #ffc029;
+    }
+    .conBox p{
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    .viewMore{
+        width: 100%;
+        display: flex; justify-content:center;
+        position: absolute; bottom: 0; right: 0;
+    }
+    .viewMore a{
+        font-size: 1.5rem; text-align: center;
+        font-family: 'Rubik Bubbles', system-ui;
+        padding: 2rem 2.5rem; box-sizing: border-box;
+        background: url(../img/button-basic-stroke.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    /* 푸터 영역 ==================================================== */
+    footer{
+        margin-top: 5vw;
+        width: 100%; height: 400px;
+        background-color: black; color: #ffffff;
+        padding: 2rem; box-sizing: border-box;
+        position: relative;
+    }
+    .footWrap{
+        width: 100%;
+        display: flex; justify-content: space-around; align-items: center;
+    }
+    .otherPage{
+        width: 60%;
+        display: flex; flex-direction: column;
+    }
+    .otherPage a{
+        font-size: 3rem; font-family: 'Rubik Bubbles', system-ui;
+        padding: 1.5rem 0 0.5rem 0; box-sizing: border-box;
+    }
+    .shortCutLink{
+        width: 40%;
+        display: flex; flex-direction: column;
+        align-items: end; justify-content: space-around;
+    }
+    .shortCutLink a{
+        font-size: 1.5rem;
+        padding: 0.7rem 0;
+    }
+    footer span{
+        position: absolute; bottom: 2rem; left: 2rem;
+        color: #555;
+    }  
+}

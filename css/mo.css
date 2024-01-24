@@ -1,0 +1,257 @@
+@media all and (max-width : 540px) {
+    html,body{
+        font-size: 14px;
+    }
+    /* 햄버거버튼 ----------------------------------- */
+    /* #menuIcon{
+        display: none;
+    } */
+    .menuIcon{
+        display: block;
+        width: 30px; height: 15px;
+        position: absolute; top: 22.5px; right: 15px; z-index: 99999;
+        cursor: pointer;
+    }
+    .menuIcon span{
+        display: block;
+        position: absolute;
+        width: 100%; height: 2px;
+        border-radius: 30px;
+        background-color: #111;
+        transition: .35s;
+    }
+    .menuIcon span:first-child{
+        top: 0;
+    }
+    .menuIcon span:last-child{
+        bottom: 0;
+    }
+
+    /* 햄버거버튼 끝 ----------------------------------- */
+
+    /* 검색 모달창 -------------------------------------- */
+    .searchModal{
+        display: none;
+    }
+
+    /* 숨김메뉴 ============================================================ */
+    .hiddenMenuBg{
+        display: none;
+        width: 100%; height: 100vh;
+        position: fixed; top: 0; left: 0; z-index: 1000;
+        background-color: #ffffff;
+    }
+    .hiddenMenuWrap{
+        width: 100%; height: 100%;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .hiddenMenu{
+        padding: 1rem 0; box-sizing: border-box;
+        font-size: 3rem;
+        font-family: 'Rubik Bubbles', system-ui;
+    }
+    .hiddenMenu:hover {
+        color: #ffc029;
+    }
+    .textAnimation{
+        width: 100%;
+        display: flex; justify-content: right; align-items: center;
+        padding: 0 4rem; box-sizing: border-box;
+    }
+    .textAnimation span{
+        animation: Bounce 4s infinite;
+        transition: all 1s;
+    }
+    @keyframes Bounce {
+        0%{
+            transform:translateY(-30%);
+            opacity: 0.5;
+        }
+        50%{
+            transform:translateY(30%);
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* #hiddenMenuIcon{
+        display: none;
+    } */
+    .hiddenMenuIcon{
+        display: block;
+        width: 30px; height: 15px;
+        position: absolute; top: 22.5px; right: 15px; z-index: 99999;
+        cursor: pointer;
+    }
+    .hiddenMenuIcon span{
+        display: block;
+        position: absolute;
+        width: 100%; height: 2px;
+        border-radius: 30px;
+        background-color: #111;
+        transition: .35s;
+    }
+    .hiddenMenuIcon span:first-child{
+        top: calc(50% - 1px);
+        transform: rotate(45deg);
+    }
+    .hiddenMenuIcon span:last-child{
+        bottom: calc(50% - 1px);
+        transform: rotate(-45deg);
+    }
+
+    /* 숨김메뉴 끝  ================================================== */
+
+    .wrap{
+        height: calc(480vh + 460px);
+    }
+    p::selection{
+        background-color: #ffc029;
+    }
+
+    /* 헤더 ================================================================= */
+
+    header{
+        width: 100%; height: 60px;
+        position: fixed; top: 0; left: 0; z-index: 999;
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 0 4rem 0 2rem; box-sizing: border-box; 
+        background-color: #ffffff;
+    }
+    .mainLogo{
+        width: 150px; height: 100%;
+        background-color: palevioletred;
+    }
+    .MenuWrap{
+        display: none;
+    }
+    .MenuWrap a{
+        padding: 0.3rem 0.5rem; box-sizing: border-box;
+        font-size: 1.5rem;
+        font-family: 'Rubik Bubbles', system-ui;
+    }
+    .searchBut{
+        width: 50px; height: 50px;
+        border-radius: 100px;
+        background-color: purple;
+    }
+
+    /* 메인컨텐츠 영역 ======================================================== */
+    .contentsWrap{
+        height: 480vh;
+    }
+
+    .leftContainer{
+        width: 100%; height: fit-content;
+        margin-bottom: 3rem;
+    }
+    .textWrap{
+        width: 100%; height: 100%;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+    }
+    .campaignTitle{
+        font-size: 5rem;
+        font-family: 'Rubik Bubbles', system-ui;
+        padding: 10rem 0 1.5rem 0;
+        color: rgb(88, 55, 11);
+    }
+    .campaignTitle ~ h4{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .campaignTitle ~ p{
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .leftContainer img{
+        display: none;
+    }
+    .rightContainer{
+        width: 100%; height: fit-content;
+        /* display: flex; justify-content: space-around; */
+    }
+    .line{
+        width: 100%;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+    }
+
+    .conBox{
+        width: 100%; height: fit-content;
+    }
+    .conBox:not(:last-child) {
+        margin-bottom: 10vh;
+    }
+    .conBox div{
+        height: fit-content;
+    }
+    .conBox img{
+        object-fit: contain;
+    }
+    .conBox h5{
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+    }
+    .conBox mark{
+        background-color: transparent;
+    }
+    .conBox:hover mark{
+        background-color: #ffc029;
+    }
+    .conBox p{
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    .viewMore{
+        width: 100%;
+        display: flex; justify-content:center;
+        position: absolute; bottom: 0; right: 0;
+    }
+    .viewMore a{
+        font-size: 1.5rem; text-align: center;
+        font-family: 'Rubik Bubbles', system-ui;
+        padding: 2rem 2.5rem; box-sizing: border-box;
+        background: url(../img/button-basic-stroke.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    /* 푸터 영역 ==================================================== */
+    footer{
+        margin-top: 5vw;
+        width: 100%; height: 400px;
+        background-color: black; color: #ffffff;
+        padding: 2rem; box-sizing: border-box;
+        position: relative;
+    }
+    .footWrap{
+        width: 100%;
+    }
+    .otherPage{
+        width: 100%;
+        display: flex; flex-direction: column;
+    }
+    .otherPage a{
+        font-size: 2.2rem; font-family: 'Rubik Bubbles', system-ui;
+        padding: 1.5rem 0; box-sizing: border-box;
+    }
+    .shortCutLink{
+        margin-top: 1rem;
+        width: 100%; height: 30%;
+        display: flex;
+        align-items: center; justify-content: space-around;
+    }
+    .shortCutLink a{
+        font-size: 1.2rem;
+        padding: 0.8rem 0;
+    }
+    footer span{
+        position: absolute; bottom: 2rem; left: 2rem;
+        color: #555;
+    }  
+}

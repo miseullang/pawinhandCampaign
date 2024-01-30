@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포인핸드 | 캠페인</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../pavicons.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../pavicons.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../pavicons.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../pavicons.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../pavicons.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../pavicons.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../pavicons.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../pavicons.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../pavicons.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../pavicons.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pavicons.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../pavicons.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../pavicons.ico/favicon-16x16.png">
+    <link rel="manifest" href="../pavicons.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
     <link href="./css/common.css" type="text/css" rel="stylesheet">
     <link href="./css/pc.css" type="text/css" rel="stylesheet">
     <link href="./css/tab.css" type="text/css" rel="stylesheet">
@@ -13,10 +31,17 @@
 <body>
     <div class="wrap">
         <div class="searchModal">
-            <input type="text" placeholder="검색어 입력">
+            <img onclick="searchToggle()" src="./img/close.png" alt="닫기 버튼">
+            <input class="searchBox" type="text" placeholder="검색어를 입력해주세요">
+            <button class="submitBut" type="submit"></button>
+            <div class="tagBox">
+                <a href="#" class="tags">#입양</a>
+                <a href="#" class="tags">#사진전</a>
+                <a href="#" class="tags">#유기견</a>
+                <a href="#" class="tags">#도사견</a>
+            </div>
         </div>
         <div class="hiddenMenuBg">
-            <!-- <input type="checkbox" id="hiddenMenuIcon"> -->
             <div class="hiddenMenuIcon menuBut">
                 <span></span>
                 <span></span>
@@ -47,15 +72,19 @@
                     <span style="animation-delay: 3.2s;">!</span>
                 </p>
             </nav>
+            <div class="imgWrap">
+                <img class="smallPrint print" src="./img/footprint.png" alt="발자국 이미지">
+                <img class="middlePrint print" src="./img/footprint.png" alt="발자국 이미지">
+                <img class="bigPrint print" src="./img/footprint.png" alt="발자국 이미지">
+            </div>
         </div>
         <header>
-            <h1 class="mainLogo">로고</h1>
+            <h1 class="mainLogo"><a href="#"></a></h1>
             <nav class="MenuWrap">
                 <a class="mainMenu" href="#">Store</a>
                 <a class="mainMenu" href="#">Friends</a>
             </nav>
-            <button class="searchBut"><i></i></button>
-            <!-- <input type="checkbox" id="menuIcon"> -->
+            <button class="searchBut" onclick="searchToggle()"></button>
                 <div class="menuIcon menuBut">
                     <span></span>
                     <span></span>
